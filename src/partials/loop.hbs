@@ -1,0 +1,35 @@
+{{#foreach posts}}
+
+  <article class="{{post_class}}">
+
+    {{#if feature_image}}
+      <div class="post-image">
+        <img src="{{img_url feature_image}}" title="{{title}}"/>
+      </div>
+    {{/if}}
+
+    <div class="post-content">
+      <div class="post-title"><h1><a href="{{url}}">{{title}}</a></h1></div>
+      {{#author}}
+        <div class="post-author">
+          <span>by <a href="{{url}}">{{name}}</a></span>
+        </div>
+      {{/author}}
+      <div class="post-article">{{content words="50"}}
+        <p><a class="post-continue" href="{{url}}">(continue reading)</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="post-meta">
+      <div class="post-tag">{{tags separator=", "}}</div>
+      <time class="post-date"
+            datetime="{{date published_at timeago="true"}}">{{date published_at
+                                                                   timeago="true"}}</time>
+
+    </div>
+    <div class="clearfix"></div>
+  </article>
+
+{{/foreach}}
+

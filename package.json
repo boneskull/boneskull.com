@@ -1,0 +1,27 @@
+{
+  "name": "boneskull.com",
+  "version": "0.0.0",
+  "description": "ghost theme for boneskull.com",
+  "dependencies": {
+    "gscan": "^1.1.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "gscan src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boneskull/auto.git"
+  },
+  "engines": {
+    "node": "^6.0.0"
+  },
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/boneskull/auto/issues"
+  },
+  "homepage": "https://github.com/boneskull/auto#readme"
+}

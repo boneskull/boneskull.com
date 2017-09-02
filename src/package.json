@@ -1,0 +1,15 @@
+{
+  "name": "auto",
+  "description": "For Blogger",
+  "version": "1.0.0",
+  "engines": {
+        "ghost": ">=1.0.0"
+    },
+    "license": "GPL",
+    "author": {
+        "email": "malvouz@gmail.com"
+    },
+    "config": {
+        "posts_per_page": 3
+    }
+}

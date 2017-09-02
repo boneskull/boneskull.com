@@ -1,0 +1,47 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+{{! The main content area on the homepage }}
+
+<main id="content" class="content" role="main">
+  {{! The tag below includes the post loop - partials/loop.hbs }}
+  {{> "loop"}}
+</main>
+
+<aside class="sidebar">
+  <div class="sidebar-wrapper">
+    <h4 class="sidebar-title">About</h4>
+    {{#get "users" limit="1" order="created_at asc"}}
+
+      {{#foreach users}}
+        <p> {{bio}}</p>
+      {{/foreach}}
+
+    {{/get}}
+  </div>
+
+  <div class="sidebar-wrapper tags">
+    <h4 class="sidebar-title">Tags</h4>
+    {{#get "tags" limit="all"  order="name asc"}}
+      <ul>
+        {{#foreach tags}}
+          <li><a href="/tag/{{slug}}">{{name}}</a></li>
+        {{/foreach}}
+      </ul>
+    {{/get}}
+  </div>
+
+  <div class="sidebar-wrapper">
+    <h4 class="sidebar-title">Recent Posts</h4>
+    {{#get "posts" limit="3" order="published_at desc"}}
+      <ul>
+        {{#foreach posts}}
+          <li><a href="{{url}}">{{title}}</a></li>
+        {{/foreach}}
+      </ul>
+    {{/get}}
+  </div>
+</aside>
+
+<div class="clearfix"></div>
+
+{{pagination}}

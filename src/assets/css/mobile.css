@@ -1,0 +1,19 @@
+@media screen and (max-width: 1150px) {
+  .wrapper-site {width: 800px;}
+} 
+
+@media screen and (max-width: 830px) {
+  .wrapper-site {width: 600px;}
+  .content {width: 100%; float: none; margin-right: 0;}
+  .sidebar {float: none; width: 100%;}
+  .sidebar-wrapper {width: 44%; float: left; margin-right: 3%; }
+  .menu-navigation-desktop {display: none;}
+  .menu-navigation {display: table-cell;}
+} 
+
+@media screen and (max-width: 620px) {
+  .wrapper-site {width: 320px; padding-left: 15px; padding-right: 15px;}
+  .content .post-meta {float: none; width: 100%; margin-top: 20px;}
+  .content .post-content {float: none; width: 100%;}
+  .sidebar-wrapper {width: 100%; float: none; }
+} 

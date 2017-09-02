@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{! Document Settings }}
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  {{! Page Meta }}
+  <title>{{meta_title}}</title>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml">
+  <meta name="HandheldFriendly" content="True"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  {{! Styles'n'Scripts }}
+  <link rel="stylesheet"
+        type="text/css"
+        href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <link rel="stylesheet"
+        type="text/css"
+        href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+  <link rel="stylesheet"
+        type="text/css"
+        href="{{asset "css/hamburgers.min.css"}}"/>
+  <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}"/>
+  <link rel="stylesheet" type="text/css" href="{{asset "css/mobile.css"}}"/>
+  {{! Ghost outputs important style and meta data with this tag }}
+  {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+<div class="wrapper-site">
+  <header>
+    <div class="branding">
+      {{#if @blog.logo}}
+        <a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}"
+                                                       alt="Blog Logo"/></a>
+      {{else}}
+        <h1><a class="blog-title" href="{{@blog.url}}">{{@blog.title}}</a></h1>
+      {{/if}}
+    </div>
+
+    <div class="menu-navigation-desktop">
+      {{navigation}}
+    </div>
+
+    <div class="menu-navigation">
+      <button class="hamburger hamburger--slider" type="button">
+       <span class="hamburger-box">
+       <span class="hamburger-inner"></span>
+       </span>
+      </button>
+      <div class="menu"><span class="title-menu">Menu</span>{{navigation}}</div>
+    </div>
+
+  </header>
+
+  {{! Slider }}
+  {{#is "home"}}
+    {{#get "posts" limit="5" filter="featured:true" include="tags"}}
+      <div class="featured-slider">
+        {{#foreach posts}}
+          <div class="featured-image-wrapper">
+            <a href="{{url}}"> <img src="{{img_url feature_image}}"
+                                    title="{{title}}"></a>
+            <div class="mask"></div>
+            <div class="featured-image-content">
+              <h1><a href="{{url}}">{{title}}</a></h1>
+            </div>
+          </div>
+
+        {{/foreach}}
+      </div>
+    {{/get}}
+  {{/is}}
+  {{! Everything else gets inserted here }}
+  {{{body}}}
+  <footer>
+    <div class="copyright">
+      <p>&copy; 2017 Christopher Hiller.  Some rights reserved.</p>
+      <p>boneskull.com is licensed under a <a rel="license"
+                                              href="//creativecommons.org/licenses/by/4.0/">Creative
+                                                                                            Commons
+                                                                                            Attribution
+                                                                                            4.0
+                                                                                            International
+                                                                                            License</a>.
+      </p>
+    </div>
+    <div class="social-media">
+      <a href="https://twitter.com/b0neskull"><span class="icon-twitter"></span></a>
+      <a href="https://github.com/boneskull"><span class="icon-github"></span></a>
+      <a href="https://www.linkedin.com/in/boneskull"><span class="icon-linkedin2"></span></a>
+    </div>
+  </footer>
+</div>
+{{! Ghost outputs important scripts and data with this tag }}
+{{ghost_foot}}
+
+<script type="text/javascript"
+        src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript"
+        src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+<script type="text/javascript" src="{{asset "js/custom.js"}}"></script>
+</body>
+</html>
