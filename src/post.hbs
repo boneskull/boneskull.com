@@ -15,7 +15,7 @@
       {{/if}}
 
       <div class="post-content">
-        <div class="post-title"><h1>{{title}}</h1></div>
+        <div class="post-title"><h1><a href="{{url}}">{{title}}</a></h1></div>
         {{#author}}
           <div class="post-author">
             <span>by <a href="{{url}}">{{name}}</a></span>
@@ -35,34 +35,28 @@
       <div class="clearfix"></div>
     </article>
 
-  {{/post}}
 
-  <script type="text/javascript">
-    function disqus_comment () {
-      {{> config}}
-      var disqus_identifier = '{{post.id}}';
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (
-        function () {
-          var dsq = document.createElement('script');
-          dsq.type = 'text/javascript';
-          dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (
-            document.getElementsByTagName('head')[0] ||
-            document.getElementsByTagName('body')[0]
-          ).appendChild(dsq);
-        }
-      )();
-    }
-
-    disqus_comment();
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = '{{@blog.url}}{{url}}';
+      this.page.identifier = '{{comment_id}}';
+    };
+    (
+      function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://boneskull.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (
+          d.head || d.body
+        ).appendChild(s);
+      }
+    )();
   </script>
   <noscript>Please enable JavaScript to view the
-    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
   </noscript>
-
+  {{/post}}
 </main>
 
 <aside class="sidebar">
@@ -101,4 +95,3 @@
 </aside>
 
 <div class="clearfix"></div>
-
