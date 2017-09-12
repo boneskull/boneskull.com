@@ -51,7 +51,7 @@ a[class^="icon-"], a[class*=" icon-"] {
 /* General */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: #fffcf2;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -152,7 +152,7 @@ header .blog-logo img {
 }
 
 .is-active .hamburger-inner, .is-active .hamburger-inner:after {
-  background: #ffffff;
+  background: #fffcf2;
 }
 
 /* Menu Navigation Desktop */
@@ -211,7 +211,7 @@ ul.nav {
 }
 
 .menu-navigation .nav > li > a {
-  color: #ffffff;
+  color: #fffcf2;
   padding: 0;
   -webkit-transition: color 0.1s ease-in;
   -moz-transition: color 0.1s ease-in;
@@ -277,7 +277,7 @@ ul.nav {
 
 .slick-dots li.slick-active button {
   background-color: #043e2c;
-  color: #ffffff;
+  color: #fffcf2;
 }
 
 .slick-dots button {
@@ -368,6 +368,9 @@ ul.nav {
 
 .content .post-article blockquote {
   border-left: none;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #E5E3DA;
   font-style: italic;
 }
 
@@ -436,7 +439,7 @@ ul.nav {
 }
 
 .pagination .page-number {
-  color: #b3b3b3;
+  color: #E5E3DA;
   float: left;
   font-size: 12px;
 }
@@ -446,7 +449,7 @@ ul.nav {
 }
 
 .pagination .pagination-posts a {
-  color: #aaaaaa;
+  color: #E5E3DA;
   font-size: 12px;
 }
 
@@ -455,7 +458,7 @@ ul.nav {
 }
 
 .pagination .pagination-posts a:hover {
-  color: #333333;
+  color: #4f555e;
 }
 
 /* Disqus Thread */
