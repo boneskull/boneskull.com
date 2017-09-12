@@ -16,4 +16,6 @@
   .content .post-meta {float: none; width: 100%; margin-top: 20px;}
   .content .post-content {float: none; width: 100%;}
   .sidebar-wrapper {width: 100%; float: none; }
+  footer .copyright {width: 100%;}
+  footer .social-media {width: 100%;}
 } 
