@@ -81,7 +81,7 @@ a:active, a:hover {
 
 .wrapper-site {
   margin: 0 auto 40px;
-  width: 1100px;
+  width: 1280px;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -112,7 +112,6 @@ header .branding h1 {
 
 header .blog-logo img {
   max-height: 100px;
-  max-width: -webkit-calc(100% - 20px);
   max-width: calc(100% - 20px);
 }
 
@@ -363,7 +362,7 @@ ul.nav {
 .content .post-article {
   color: #4f555e;
   font-size: 16px;
-  line-height: 26px;
+  line-height: 28px;
 }
 
 .content .post-article blockquote {
@@ -374,8 +373,20 @@ ul.nav {
   font-style: italic;
 }
 
+.content .post-article p {
+  margin-top: 16px;
+}
+
+.content .post-article blockquote p {
+  margin-top: auto;
+}
+
 .content .post-article img {
   max-width: 100%;
+  cursor: pointer;
+  padding: 8px;
+  border: 1px dashed #e5e3da;
+  border-radius: 4px;
 }
 
 .content .post-article a {

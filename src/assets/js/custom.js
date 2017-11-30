@@ -56,4 +56,7 @@ $(document)
         ]
       });
 
+      $('.content .post-article img').each(function () {
+        $(this).featherlight($(this).attr('src'));
+      });
   }); //jQuery ready
