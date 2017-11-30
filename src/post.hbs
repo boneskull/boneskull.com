@@ -72,6 +72,17 @@
   </div>
 
   <div class="sidebar-wrapper">
+    <h4 class="sidebar-title">Recent Posts</h4>
+    {{#get "posts" limit="3" order="published_at desc"}}
+      <ul>
+        {{#foreach posts}}
+          <li><a href="{{url}}">{{title}}</a></li>
+        {{/foreach}}
+      </ul>
+    {{/get}}
+  </div>
+
+  <div class="sidebar-wrapper tags">
     <h4 class="sidebar-title">Tags</h4>
     {{#get "tags" limit="all"  order="name asc"}}
       <ul>
@@ -82,16 +93,6 @@
     {{/get}}
   </div>
 
-  <div class="sidebar-wrapper">
-    <h4 class="sidebar-title">Recent Posts</h4>
-    {{#get "posts" limit="3" order="published_at desc"}}
-      <ul>
-        {{#foreach posts}}
-          <li><a href="{{url}}">{{title}}</a></li>
-        {{/foreach}}
-      </ul>
-    {{/get}}
-  </div>
 </aside>
 
 <div class="clearfix"></div>
