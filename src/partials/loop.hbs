@@ -4,7 +4,8 @@
 
     {{#if feature_image}}
       <div class="post-image">
-        <a href="{{url}}"><img src="{{img_url feature_image}}" title="{{title}}"/></a>
+        <a href="{{url}}"><img src="{{img_url feature_image}}"
+                               title="{{title}}"/></a>
       </div>
     {{/if}}
 
@@ -23,9 +24,8 @@
 
     <div class="post-meta">
       <div class="post-tag">{{tags separator=", "}}</div>
-      <time class="post-date"
-            datetime="{{date published_at timeago="true"}}">{{date published_at
-                                                                   timeago="true"}}</time>
+      <time class="post-date" datetime="{{date published_at}}">{{date
+        published_at}}</time>
 
     </div>
     <div class="clearfix"></div>
