@@ -8,7 +8,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "gscan src",
-    "zip": "zip -r auto.zip src"
+    "zip": "zip -x \\*.DS_Store -r auto.zip src"
   },
   "repository": {
     "type": "git",
