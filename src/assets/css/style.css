@@ -366,10 +366,8 @@ ul.nav {
 }
 
 .content .post-article blockquote {
-  border-left: none;
+  border-left: 4px solid #E5E3DA;
   font-size: 16px;
-  border-radius: 4px;
-  background-color: #E5E3DA;
   font-style: italic;
 }
 
@@ -546,4 +544,8 @@ footer .social-media a:hover {
 
 .anchorjs-link {
   text-decoration: none;
+}
+
+pre {
+  border: 1px dashed #E5E3DA;
 }
