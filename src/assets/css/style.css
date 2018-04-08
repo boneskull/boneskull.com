@@ -549,3 +549,8 @@ footer .social-media a:hover {
 pre {
   border: 1px dashed #E5E3DA;
 }
+
+code {
+  color: #ee9900;
+  background-color: #f8f2f0;
+}
