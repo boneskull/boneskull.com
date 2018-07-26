@@ -1,28 +1,32 @@
 {
-  "name": "boneskull.com",
-  "version": "0.0.0",
-  "description": "ghost theme for boneskull.com",
+  "name": "@boneskull/boneskull.com",
+  "version": "2.0.0",
+  "description": "boneskull.com's Ghost theme",
   "dependencies": {
-    "gscan": "^1.1.7"
+    "gscan": "^1.5.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "gscan src",
-    "zip": "zip -x \\*.DS_Store -r auto.zip src"
+    "zip": "zip -x \\*.DS_Store -r boneskull.com.zip src"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/boneskull/auto.git"
+    "url": "git+https://github.com/boneskull/boneskull.com.git"
   },
   "engines": {
-    "node": "^6.0.0"
+    "node": "^8.0.0",
+    "npm": "^6.0.0"
   },
   "private": true,
   "keywords": [],
-  "author": "",
-  "license": "UNLICENSED",
+  "author": "Malvouz <malvouz@gmail.com> (https://malvouz.com)",
+  "contributors": [
+    "Christopher Hiller <boneskull@boneskull.com> (https://boneskull.com)"
+  ],
+  "license": "GPL-3.0-only",
   "bugs": {
-    "url": "https://github.com/boneskull/auto/issues"
+    "url": "https://github.com/boneskull/boneskull.com/issues"
   },
-  "homepage": "https://github.com/boneskull/auto#readme"
+  "homepage": "https://github.com/boneskull/boneskull.com#readme"
 }
