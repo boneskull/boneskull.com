@@ -19,7 +19,7 @@
     "npm": "^6.0.0"
   },
   "private": true,
-  "keywords": [],
+  "keywords": ["ghost-theme"],
   "author": "Malvouz <malvouz@gmail.com> (https://malvouz.com)",
   "contributors": [
     "Christopher Hiller <boneskull@boneskull.com> (https://boneskull.com)"
